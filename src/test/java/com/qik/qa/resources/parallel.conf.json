@@ -1,0 +1,28 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "username": "jhalinsonacostam_PjaJ4G",
+  "access_key": "V2zrb134Ez2YfvE5q4ZY",
+
+  "capabilities": {
+    "project": "First TestNg Android Project",
+    "build": "browserstack-build-1",
+    "name": "parallel_test",
+    "browserstack.debug": true,
+    "app": "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c"
+  },
+
+  "environments": [
+    {
+      "device": "Google Pixel 3",
+      "os_version": "9.0"
+    },
+    {
+      "device": "Samsung Galaxy S10e",
+      "os_version": "9.0"
+    },
+    {
+      "device": "Huawei P30",
+      "os_version": "9.0"
+    }
+  ]
+}
