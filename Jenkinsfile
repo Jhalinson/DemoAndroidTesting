@@ -1,13 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('Execute Selenium Tests from Github Repo Using Jenkins 2.0 Pipeline') {
+    stage('Execute Appium Tests from Github Repo Using Jenkins 2.0 Pipeline') {
       steps {
         echo 'Execute Tests'
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         echo "Jenkins Workspace ${env.WORKSPACE}"
-        sh "mvn -f MyStore clean"
-        sh "mvn -f MyStore test -P testng"
+        sh "mvn clean"
+        sh "mvn test -P testng"
       }
     } 
   }
