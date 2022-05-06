@@ -12,8 +12,13 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
 //                 git 'https://github.com/Jhalinson/DemoAndroidTesting.git'
-                echo "WorkSpace {$WORKSPACE}"
+//                 echo "WorkSpace {$WORKSPACE}"
                 echo 'Hola'
+                git branch: 'main', url: 'https://github.com/Jhalinson/DemoAndroidTesting.git'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '4d9f07a4-3771-416f-ad95-1bdf60649453', url: 'https://github.com/Jhalinson/DemoAndroidTesting.git']]])
+                sh 'mvn clean'
+                sh 'mvn compile'
+                
                 // Run Maven on a Unix agent.
 //                 sh "mvn clean"
 //                 sh "mvn compile"
