@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/Jhalinson/DemoAndroidTesting.git'
+//                 git 'https://github.com/Jhalinson/DemoAndroidTesting.git'
                 echo "WorkSpace {$WORKSPACE}"
                 echo 'Hola'
                 // Run Maven on a Unix agent.
