@@ -11,10 +11,11 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/Jhalinson/DemoAndroidTesting.git'
-
+                echo "WorkSpace {$WORKSPACE}"
+                echo 'Hola'
                 // Run Maven on a Unix agent.
-                sh "mvn clean"
-                sh "mvn compile"
+//                 sh "mvn clean"
+//                 sh "mvn compile"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
